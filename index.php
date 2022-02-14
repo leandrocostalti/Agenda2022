@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_br">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,36 +41,36 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      
-      
+
+
     </ul>
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
-      
+
 
       <!-- Messages Dropdown Menu -->
-      
+
       <!-- Notifications Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="fas fa-caret-square-down"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          
-          
+
+
           <a href="#" class="dropdown-item">
             <i class="fas fa-user-edit"></i></i> Editar Perfil
-            
+
           </a>
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item">
             <i class="fas fa-sign-out-alt"></i> Sair do sistema
           </a>
-          
+
       </li>
-      
+
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -112,7 +112,7 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-               
+
                <li class="nav-item">
                 <a href="pages/gallery.html" class="nav-link">
                   <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -136,7 +136,7 @@
                     Perfl
                   </p>
                 </a>
-              </li>       
+              </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -149,7 +149,7 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
-        
+
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
@@ -158,7 +158,7 @@
     <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
-        
+
         <!-- /.row -->
         <!-- Main row -->
         <div class="row">
@@ -183,7 +183,7 @@
                     <label for="exampleInputEmail1">Endereço de E-mail</label>
                     <input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite o endereço de e-mail...">
                   </div>
-                  
+
                   <div class="form-group">
                     <label for="exampleInputFile">Foto do contato</label>
                     <div class="input-group">
@@ -191,10 +191,10 @@
                         <input name="foto" type="file" class="custom-file-input" id="exampleInputFile">
                         <label class="custom-file-label" for="exampleInputFile">Upload da foto</label>
                       </div>
-                      
+
                     </div>
                   </div>
-                  
+
                 </div>
                 <!-- /.card-body -->
 
@@ -209,9 +209,9 @@
                     $telefone = $_POST['telefone'];
                     $email = $_POST['email'];
                     $foto = $_POST['foto'];
-                    
+
                     $cadastro = "INSERT INTO tb_contato
-                     (nome_contato,telefone_contato,email_contato,foto_contato) 
+                     (nome_contato,telefone_contato,email_contato,foto_contato)
                      VALUES (:nome,:telefone,:email,:foto)";
 
                      try {
@@ -221,7 +221,7 @@
                        $result->bindParam(':email',$email,PDO::PARAM_STR);
                        $result->bindParam(':foto',$foto,PDO::PARAM_STR);
                        $result->execute();
-                       
+
                        $contar = $result->rowCount();
                        if($contar > 0){
                         echo '<div class="container">
@@ -273,8 +273,8 @@
                           $contar = $resultado->rowCount();
                           if($contar > 0){
                             while($show = $resultado->FETCH(PDO::FETCH_OBJ)){
-                                
-                            
+
+
                     ?>
                     <tr>
                       <td><img style="width: 41px; border-radius: 100%;" src="img/foto1.jpg"></td>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Agenda JMF | Login</title>
+  <title>Agenda JMF | Cadastro de Usuário</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,14 +21,32 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>Agenda</b> JMF</a>
+    <a href="cad_user.php" style="font-size: 25px"><b>Cadastre-se para ter acesso</b></a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Para acessar entre com E-mail e Senha</p>
+      <p class="login-box-msg">Cadastre todos os dados para ter acesso a agenda</p>
 
       <form action="" method="post">
+      <div class="form-group">
+        <label for="exampleInputFile">Foto do usuário</label>
+        <div class="input-group">
+            <div class="custom-file">
+            <input type="file" class="custom-file-input" name="foto" id="foto" required>
+            <label class="custom-file-label" for="exampleInputFile">Arquivo de imagem</label>
+            </div>
+            
+        </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" name="nome" class="form-control" placeholder="Digite seu Nome...">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
         <div class="input-group mb-3">
           <input type="email" name="email" class="form-control" placeholder="Digite seu E-mail...">
           <div class="input-group-append">
@@ -37,6 +55,7 @@
             </div>
           </div>
         </div>
+        
         <div class="input-group mb-3">
           <input type="password" name="senha" class="form-control" placeholder="Digite sua Senha...">
           <div class="input-group-append">
@@ -50,8 +69,8 @@
             
           </div>
           <!-- /.col -->
-          <div class="col-12" style="margin-bottom: 5px">
-            <button type="submit" name="login" class="btn btn-primary btn-block">Acessar a Agenda</button>
+          <div class="col-12" style="margin-bottom: 25px">
+            <button type="submit" name="botao" class="btn btn-primary btn-block">Finalizar Cadastro</button>
           </div>
           <!-- /.col -->
         </div>
@@ -59,8 +78,8 @@
       
 
       
-      <p style="text-align: center; padding-top: 25px">
-        <a href="cad_user.php" class="text-center">Se ainda não tem cadastro clique aqui!</a>
+      <p style="text-align: center;">
+        <a href="index.php" class="text-center">Voltar para o Login!</a>
       </p>
     </div>
     <!-- /.login-card-body -->
